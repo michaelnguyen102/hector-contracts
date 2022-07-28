@@ -114,6 +114,18 @@ contract UniswapPairOracle is Ownable {
         require(reserve0 != 0 && reserve1 != 0, 'UniswapPairOracle: NO_RESERVES'); // Ensure that there's liquidity in the pair
     }
 
+    function getPrice0CumulativeLast() external returns (uint price0) {
+        price0 = price0CumulativeLast;
+    }
+
+    function getPrice1CumulativeLast() external returns (uint price1) {
+        price1 = price1CumulativeLast;
+    }
+
+    function getBlockTimestampLast() external returns (uint32 blockTime) {
+        blockTime = blockTimestampLast;
+    }
+
     function setPeriod(uint _period) external onlyPolicy {
         PERIOD = _period;
     }
