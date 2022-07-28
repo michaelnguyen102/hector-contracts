@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.7.5;
+pragma solidity 0.8.7;
 
 // computes square roots using the babylonian method
 // https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method

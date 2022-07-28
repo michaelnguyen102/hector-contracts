@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.7.5;
+pragma solidity 0.8.7;
 
 import './Uniswap/Interfaces/IUniswapV2Factory.sol';
 import './Uniswap/Interfaces/IUniswapV2Pair.sol';
@@ -114,15 +114,15 @@ contract UniswapPairOracle is Ownable {
         require(reserve0 != 0 && reserve1 != 0, 'UniswapPairOracle: NO_RESERVES'); // Ensure that there's liquidity in the pair
     }
 
-    function getPrice0CumulativeLast() external returns (uint price0) {
+    function getPrice0CumulativeLast() view external returns (uint price0) {
         price0 = price0CumulativeLast;
     }
 
-    function getPrice1CumulativeLast() external returns (uint price1) {
+    function getPrice1CumulativeLast() view external returns (uint price1) {
         price1 = price1CumulativeLast;
     }
 
-    function getBlockTimestampLast() external returns (uint32 blockTime) {
+    function getBlockTimestampLast() view external returns (uint32 blockTime) {
         blockTime = blockTimestampLast;
     }
 

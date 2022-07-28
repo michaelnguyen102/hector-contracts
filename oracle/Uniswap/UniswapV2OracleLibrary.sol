@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.7.5;
+pragma solidity 0.8.7;
 
 import '../Uniswap/Interfaces/IUniswapV2Pair.sol';
 import '../Math/FixedPoint.sol';
